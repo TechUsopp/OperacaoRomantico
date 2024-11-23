@@ -1,85 +1,99 @@
-/* Estilo geral */
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #121212;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  h1 {
-    color: #ff5f5f;
-    margin: 10px 0;
-  }
-  
-  .message {
-    font-size: 18px;
-    margin: 10px 0;
-    color: #ffc0cb;
-  }
-  
-  /* Estilo do carrossel */
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #ff5f5f;
+  margin: 10px 0;
+}
+
+.message {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #ffc0cb;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 735px;
+  height: auto;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.slide img {
+  max-width: 30%;
+  height: auto;
+}
+
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 5px;
+  z-index: 1;
+}
+
+.carousel button.prev {
+  left: 10px;
+}
+
+.carousel button.next {
+  right: 10px;
+}
+
+.countdown {
+  margin: 20px 0;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.timer div {
+  background: #202020;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  color: #ff5f5f;
+}
+
+.player {
+  margin-top: 20px;
+}
+
+audio {
+  background-color: #202020;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
   .carousel {
-    position: relative;
-    overflow: hidden;
-    margin: 20px auto;
-    width: 100%;
-    max-width: 735px;  /* Ajustando a largura máxima para 735px */
-    height: 1300px;    /* Ajustando a altura máxima para 1300px */
+      width: 100%;
   }
-  
-  .slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .slides img {
-    width: 735px;  /* Definindo a largura exata */
-    height: 1300px; /* Definindo a altura exata */
-    object-fit: contain;  /* Ajustando a imagem para não cortar e manter a proporção */
-    flex-shrink: 0; /* Impede que as imagens encolham */
-  }
-  
-  /* Estilo do botão do carrossel */
-  .carousel button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-  }
-  
-  /* Contagem regressiva */
-  .countdown {
-    margin: 20px 0;
-  }
-  
-  .timer {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-  }
-  
-  .timer div {
-    background: #202020;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 18px;
-    color: #ff5f5f;
-  }
-  
-  /* Player de música */
-  .player {
-    margin-top: 20px;
-  }
-  
-  audio {
-    background-color: #202020;
-    border-radius: 5px;
-  }
-  
+}
